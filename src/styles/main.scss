@@ -1,3 +1,9 @@
-body {
-    background-color: red;
+.container {
+    max-width: calc(1366px);
+    justify-content: center;
+    align-items: center
 }
+
+@import './base/vars';
+@import './base/reset';
+@import './blocks/nav';

@@ -1,0 +1,22 @@
+* {
+    font-family: 'DM Sans', sans-serif;
+    background-color: $light;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    text-decoration: none;
+    color: #000000;
+    font-weight: 700;
+}
+
+.container {
+    padding-top: 23px;
+    padding-bottom: 23px;
+    padding-left: 50px;
+    max-width: calc(1366px);
+    justify-content: center;
+    align-items: center
+}

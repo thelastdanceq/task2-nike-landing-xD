@@ -47,9 +47,13 @@ module.exports = {
                 }
             },
             {
-                test: /\.jpg$/,
-                type: 'asset/resource'
-            }
+                test: /\.(png|jpe?g|gif)$/i,
+                use: [
+                    {
+                        loader: 'file-loader',
+                    },
+                ],
+            },
         ],
     },
     plugins: [

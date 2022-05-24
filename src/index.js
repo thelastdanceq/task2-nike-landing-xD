@@ -1,7 +1,6 @@
 import './styles/main.scss'
-import photo from './assets/photo.jpg'
-console.log("vlad asd");
+import logo from './assets/headerlogo.png'
 
 
-const photoImg = document.querySelector('img');
-photoImg.src = photo
+const logoHeader = document.getElementById('header-logo__image');
+logoHeader.src = logo;

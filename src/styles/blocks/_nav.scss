@@ -1,0 +1,16 @@
+.nav-row {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    text-align: center;
+}
+
+.nav__links {
+    display: flex;
+    flex-direction: row;
+
+    & a {
+        margin-right: 42px;
+        font-size: 24px;
+    }
+}
