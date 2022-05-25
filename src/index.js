@@ -11,27 +11,20 @@ import commentgirl from './assets/commentgirl.png'
 
 import Swiper from 'swiper';
 import '../node_modules/swiper/swiper.scss';
+import '../node_modules/swiper/modules/pagination/pagination.scss';
+
 const swiper = new Swiper('.swiper', {
     // Optional parameters
     direction: 'horizontal',
-    loop: true,
-
     // If we need pagination
     pagination: {
         el: '.swiper-pagination',
+        type: 'fraction',
     },
 
-    // Navigation arrows
-    navigation: {
-        nextEl: '.swiper-button-next',
-        prevEl: '.swiper-button-prev',
-    },
-
-    // And if we need scrollbar
-    scrollbar: {
-        el: '.swiper-scrollbar',
-    },
 });
+swiper.loopDestroy();
+swiper.loopCreate();
 
 
 
