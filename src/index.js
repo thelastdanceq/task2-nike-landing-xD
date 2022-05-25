@@ -8,7 +8,7 @@ import feather from './assets/feather.png'
 import pillow from './assets/pillow.png'
 import clients from './assets/clients.png'
 import commentgirl from './assets/commentgirl.png'
-
+import prodimage from './assets/prodimage.png'
 import Swiper from 'swiper';
 import '../node_modules/swiper/swiper.scss';
 import '../node_modules/swiper/modules/pagination/pagination.scss';
@@ -54,3 +54,5 @@ pillowImg.src = pillow;
 
 const asdas = document.getElementById('comments-img');
 asdas.src = clients
+const afterComentsImage = document.getElementsByClassName('after-coments-image')[0];
+afterComentsImage.src = prodimage

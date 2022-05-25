@@ -1,0 +1,36 @@
+.after-coments {
+    background-color: $light;
+
+    &-container {
+        padding-left: calc(90px + 50px);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    &-button {
+        max-width: 170px;
+        margin-bottom: 90px;
+    }
+
+    &-circle {
+        position: relative;
+        z-index: 0;
+        bottom: -70px;
+        left: -25px;
+        width: 85px;
+        height: 85px;
+        background-color: #84F2D6;
+        border-radius: 50%;
+    }
+
+    &-image {
+        position: relative;
+        z-index: 2;
+    }
+
+    &-images {
+        margin-bottom: 20px;
+    }
+}
