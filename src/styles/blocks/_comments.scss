@@ -1,0 +1,26 @@
+.comments {
+    background-color: $light;
+
+    &-header {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        &__image {
+            padding-top: 120px;
+        }
+
+        &__text {
+
+            font-family: 'DM Sans';
+            font-style: normal;
+            font-weight: 700;
+            font-size: 24px;
+            line-height: 31px;
+            text-align: center;
+
+            color: #000000;
+        }
+    }
+
+}

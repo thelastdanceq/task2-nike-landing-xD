@@ -6,6 +6,7 @@ import secondimg from './assets/secondBoots.png'
 import performance from './assets/performance.png'
 import feather from './assets/feather.png'
 import pillow from './assets/pillow.png'
+import clients from './assets/clients.png'
 
 
 
@@ -30,3 +31,5 @@ featherImg.src = feather;
 const pillowImg = document.getElementById('benefitsComfort');
 pillowImg.src = pillow;
 
+const asdas = document.getElementById('comments-img');
+asdas.src = clients
