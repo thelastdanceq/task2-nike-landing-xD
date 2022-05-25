@@ -24,3 +24,19 @@
     }
 
 }
+
+.swiper {
+    max-width: 570px;
+    height: 270px;
+
+    &-slide {
+        display: flex;
+        background-color: aliceblue;
+        border-bottom: 3px solid $orange;
+
+        &-img {
+            max-width: 102px;
+            max-height: 102px;
+        }
+    }
+}

@@ -7,6 +7,31 @@ import performance from './assets/performance.png'
 import feather from './assets/feather.png'
 import pillow from './assets/pillow.png'
 import clients from './assets/clients.png'
+import commentgirl from './assets/commentgirl.png'
+
+import Swiper from 'swiper';
+import '../node_modules/swiper/swiper.scss';
+const swiper = new Swiper('.swiper', {
+    // Optional parameters
+    direction: 'horizontal',
+    loop: true,
+
+    // If we need pagination
+    pagination: {
+        el: '.swiper-pagination',
+    },
+
+    // Navigation arrows
+    navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+    },
+
+    // And if we need scrollbar
+    scrollbar: {
+        el: '.swiper-scrollbar',
+    },
+});
 
 
 
@@ -19,7 +44,10 @@ const firstPageFooters = document.getElementsByClassName('firstpage-footer');
 for (let footer of firstPageFooters) {
     footer.style.backgroundImage = `url(${logodivider}) `
 }
-
+const imgs = document.getElementsByClassName('swiper-slide-img-img')
+for (let img of imgs) {
+    img.src = commentgirl
+}
 
 const secondPageImg = document.getElementById('second-page-img');
 secondPageImg.src = secondimg;
