@@ -34,10 +34,34 @@
     &-slide {
         max-width: 570px;
 
+        p {
+
+            font-family: 'DM Sans';
+            font-style: normal;
+            font-weight: 400;
+            font-size: 18px;
+            line-height: 23px;
+            text-align: center;
+
+            color: #000000;
+
+            &.coma {
+                font-family: 'DM Sans';
+                font-style: normal;
+                font-weight: 400;
+                font-size: 36px;
+                line-height: 47px;
+                text-align: center;
+
+                color: #FC6B3F;
+            }
+
+        }
+
 
         display: flex;
-
-        align-items: center;
+        flex-direction: column;
+        justify-content: center;
         border-bottom: 3px solid $orange;
 
         background: #FFFFFF;
@@ -45,21 +69,30 @@
 
 
         &-img {
+            padding-left: 20px;
+
+            img {
+                margin-right: 130px;
+            }
+
+            span {
+                font-family: 'DM Sans';
+                font-style: normal;
+                font-weight: 700;
+                font-size: 14px;
+                line-height: 18px;
+                text-align: center;
+
+                color: #727272;
+
+            }
+
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
             max-width: 102px;
             max-height: 102px;
         }
     }
-}
-
-.coma {
-
-    font-family: 'DM Sans';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 36px;
-    line-height: 47px;
-    text-align: center;
-
-    color: #FC6B3F;
-
 }

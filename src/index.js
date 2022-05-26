@@ -20,13 +20,11 @@ const swiper = new Swiper('.swiper', {
     // Optional parameters
     direction: 'horizontal',
     // If we need pagination
-    pagination: {
-        el: '.swiper-pagination',
-        type: 'fraction',
-    },
+    
     slidesPerView: 2,
     loop: false,
     spaceBetween: 80,
+    loopAdditionalSlides: 0,
 
 
 });
