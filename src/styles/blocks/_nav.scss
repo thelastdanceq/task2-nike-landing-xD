@@ -31,7 +31,14 @@
     & a {
         margin-right: 42px;
         font-size: 24px;
+        display: block;
+        height: 100%;
+
+        &:hover {
+            background-color: #f5e4b7;
+        }
     }
+
 }
 
 @media (min-width: 1200px) {}
@@ -76,6 +83,12 @@
             font-weight: 700;
             font-size: 40px;
             line-height: 36px;
+
+            & a {
+                margin-bottom: 50px;
+                margin-left: 50px;
+            }
+
         }
 
         display: none;
