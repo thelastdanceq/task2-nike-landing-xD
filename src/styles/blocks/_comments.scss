@@ -106,7 +106,21 @@
 @media (min-width: 1200px) {}
 
 /* Landscape tablets and medium desktops */
-@media (min-width: 992px) and (max-width: 1199px) {}
+@media (min-width: 992px) and (max-width: 1199px) {
+    .swiper {
+        max-width: 85vw;
+        height: 270px;
+
+        &-slide {
+            &-img {
+                img {
+                    margin-right: 70px;
+                }
+            }
+        }
+    }
+
+}
 
 /* Portrait tablets and small desktops */
 @media (min-width: 768px) and (max-width: 991px) {}
@@ -119,6 +133,14 @@
     .swiper {
         max-width: 85vw;
         height: 270px;
+
+        &-slide {
+            &-img {
+                img {
+                    margin-right: 30px;
+                }
+            }
+        }
     }
 
     .after-coments-container {
