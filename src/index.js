@@ -47,14 +47,8 @@ const swiper = new Swiper('.swiper', {
         },
     }
 });
-
-
-
-const logoHeader = document.getElementById('header-logo__image');
-logoHeader.src = logo;
 const firstPageImg = document.getElementById('first-page-img');
 const firstpageButton = document.getElementsByClassName('firstpage-button__button')[0];
-
 const decideWidth = () => {
     if (document.body.clientWidth <= 425) {
         firstpageButton.style.backgroundImage = `url(${circle})`
@@ -65,12 +59,19 @@ const decideWidth = () => {
         firstPageImg.src = firstpage;
     }
 }
+
+const setImageBySelector = (selector, image) => {
+    document.querySelector(selector).src = image;
+}
+
 decideWidth()
 
 
 window.onresize = function () {
     decideWidth()
 };
+
+
 
 const firstPageFooters = document.getElementsByClassName('firstpage-footer');
 for (let footer of firstPageFooters) {
@@ -80,28 +81,16 @@ const imgs = document.getElementsByClassName('swiper-slide-img-img')
 for (let img of imgs) {
     img.src = commentgirl
 }
+setImageBySelector('#header-logo__image', logo)
+setImageBySelector('#second-page-img', secondimg)
+setImageBySelector('#benefitsPerformance', performance)
+setImageBySelector('#benefitsFeather', feather)
+setImageBySelector('#benefitsComfort', pillow)
+setImageBySelector('#comments-img', clients)
+setImageBySelector('.after-coments-image', prodimage)
+setImageBySelector('#contacts-image', support)
+setImageBySelector('#btn-icon', whatsapp)
+setImageBySelector('#footer-container-logo-img', footericon)
 
-const secondPageImg = document.getElementById('second-page-img');
-secondPageImg.src = secondimg;
-
-const performanceImg = document.getElementById('benefitsPerformance');
-performanceImg.src = performance;
-const featherImg = document.getElementById('benefitsFeather');
-featherImg.src = feather;
-const pillowImg = document.getElementById('benefitsComfort');
-pillowImg.src = pillow;
-
-const asdas = document.getElementById('comments-img');
-asdas.src = clients
-const afterComentsImage = document.getElementsByClassName('after-coments-image')[0];
-afterComentsImage.src = prodimage
-
-
-const contactsImage = document.getElementById('contacts-image');
-contactsImage.src = support
-const contactsBTNImage = document.getElementById('btn-icon');
-contactsBTNImage.src = whatsapp
-const footerLogo = document.getElementById('footer-container-logo-img');
-footerLogo.src = footericon
 
 
