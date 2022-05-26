@@ -9,6 +9,9 @@ import pillow from './assets/pillow.png'
 import clients from './assets/clients.png'
 import commentgirl from './assets/commentgirl.png'
 import prodimage from './assets/prodimage.png'
+import support from './assets/support 1.png'
+import footericon from './assets/footericon.png'
+import whatsapp from './assets/whatsapp.png'
 import Swiper from 'swiper';
 import '../node_modules/swiper/swiper.scss';
 import '../node_modules/swiper/modules/pagination/pagination.scss';
@@ -21,6 +24,10 @@ const swiper = new Swiper('.swiper', {
         el: '.swiper-pagination',
         type: 'fraction',
     },
+    slidesPerView: 2,
+    loop: false,
+    spaceBetween: 80,
+
 
 });
 swiper.loopDestroy();
@@ -56,3 +63,11 @@ const asdas = document.getElementById('comments-img');
 asdas.src = clients
 const afterComentsImage = document.getElementsByClassName('after-coments-image')[0];
 afterComentsImage.src = prodimage
+
+
+const contactsImage = document.getElementById('contacts-image');
+contactsImage.src = support
+const contactsBTNImage = document.getElementById('btn-icon');
+contactsBTNImage.src = whatsapp
+const footerLogo = document.getElementById('footer-container-logo-img');
+footerLogo.src = footericon

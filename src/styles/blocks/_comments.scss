@@ -28,20 +28,38 @@
 }
 
 .swiper {
-    max-width: 570px;
+    max-width: 75vw;
     height: 270px;
-    box-shadow: 0px 0px 18px -11px #000000;
 
     &-slide {
+        max-width: 570px;
+
+
         display: flex;
+
         align-items: center;
         border-bottom: 3px solid $orange;
 
         background: #FFFFFF;
+        box-shadow: 0px 0px 18px -11px #000000;
+
 
         &-img {
             max-width: 102px;
             max-height: 102px;
         }
     }
+}
+
+.coma {
+
+    font-family: 'DM Sans';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 36px;
+    line-height: 47px;
+    text-align: center;
+
+    color: #FC6B3F;
+
 }

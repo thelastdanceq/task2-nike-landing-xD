@@ -1,0 +1,56 @@
+.contacts {
+    padding-top: 102px;
+    background-color: $light;
+
+    &-block {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding-left: calc(50px + 50px);
+
+        &-image {
+            margin-bottom: 12px;
+        }
+
+        &-button {
+            &-button {
+                img {
+                    padding-right: 10px;
+                }
+
+                min-width: 300px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+        }
+
+        &-text {
+            text-align: center;
+
+            p {
+                font-family: 'DM Sans';
+                font-style: normal;
+                font-weight: 700;
+                font-size: 24px;
+                line-height: 31px;
+                text-align: center;
+
+                color: #000000;
+            }
+
+            span {
+                font-family: 'DM Sans';
+                font-style: normal;
+                font-weight: 400;
+                font-size: 18px;
+                line-height: 23px;
+                text-align: center;
+
+                color: #000000;
+            }
+
+        }
+    }
+}
