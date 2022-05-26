@@ -29,7 +29,7 @@
     padding: 15px;
     background: #FFFFFF;
     box-shadow: 0px 0px 18px -11px #000000;
-    width: 400px;
+    max-width: 400px;
     height: 200px;
     display: flex;
     flex-direction: column;
@@ -65,4 +65,24 @@
 
 .secondpage {
     background: linear-gradient(180deg, #FFF6DA 0%, rgba(196, 196, 196, 0) 100%);
+}
+
+@media screen and (min-width:1024px) and (max-width:1243px) {
+
+    .description-secondpage {
+        padding-left: 0;
+    }
+
+    .container {
+        padding-left: 0;
+    }
+
+    .secondpage-benefits {
+        padding-left: 20px;
+        padding-right: 20px;
+
+        &-item {
+            max-width: 300px;
+        }
+    }
 }

@@ -28,11 +28,12 @@
 }
 
 .swiper {
-    max-width: 75vw;
+    max-width: 90vw;
     height: 270px;
 
     &-slide {
-        max-width: 570px;
+
+        max-width: calc(90vw / 2);
 
         p {
 
