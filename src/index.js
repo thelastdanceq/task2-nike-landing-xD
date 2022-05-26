@@ -52,7 +52,7 @@ const swiper = new Swiper('.swiper', {
 const firstPageImg = document.getElementById('first-page-img');
 const firstpageButton = document.getElementsByClassName('firstpage-button__button')[0];
 const decideWidth = () => {
-    if (document.body.clientWidth <= 425) {
+    if (document.body.clientWidth <= 426) {
         firstpageButton.style.backgroundImage = `url(${circle})`
         firstpageButton.style.backgroundPosition = 'center'
         firstpageButton.style.backgroundRepeat = 'no-repeat'
@@ -110,3 +110,18 @@ closeBtn.addEventListener('click', () => {
     links.classList.toggle('active');
     back.classList.toggle('active')
 })
+
+const anchors = document.querySelectorAll('a[href*="#"]')
+
+for (let anchor of anchors) {
+    anchor.addEventListener('click', function (e) {
+        e.preventDefault()
+
+        const blockID = anchor.getAttribute('href').substr(1)
+
+        document.getElementById(blockID).scrollIntoView({
+            behavior: 'smooth',
+            block: 'start'
+        })
+    })
+}
