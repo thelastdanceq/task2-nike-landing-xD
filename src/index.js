@@ -118,6 +118,8 @@ for (let anchor of anchors) {
         e.preventDefault()
 
         const blockID = anchor.getAttribute('href').substr(1)
+        links.classList.remove('active');
+        back.classList.remove('active')
 
         document.getElementById(blockID).scrollIntoView({
             behavior: 'smooth',
