@@ -1,6 +1,7 @@
 import './styles/main.scss'
 import logo from './assets/headerlogo.png'
 import firstpage from './assets/boots.png'
+import firstpage2 from './assets/bootshome2.png'
 import logodivider from './assets/logodivider.png'
 import secondimg from './assets/secondBoots.png'
 import performance from './assets/performance.png'
@@ -12,31 +13,64 @@ import prodimage from './assets/prodimage.png'
 import support from './assets/support 1.png'
 import footericon from './assets/footericon.png'
 import whatsapp from './assets/whatsapp.png'
+import circle from './assets/circles.png'
 import Swiper from 'swiper';
 import '../node_modules/swiper/swiper.scss';
 import '../node_modules/swiper/modules/pagination/pagination.scss';
 
 const swiper = new Swiper('.swiper', {
-    // Optional parameters
     direction: 'horizontal',
-    // If we need pagination
-
-    slidesPerView: 2,
     loop: false,
-    spaceBetween: 80,
     loopAdditionalSlides: 0,
+    slidesPerView: 1,
+    spaceBetween: 80,
+    breakpoints: {
+        320: {
 
+        },
+        480: {
 
+        },
+        768: {
+            slidesPerView: 1,
+            spaceBetween: 20,
+
+        },
+        992: {
+            slidesPerView: 2,
+            spaceBetween: 30,
+
+        },
+        1200: {
+            slidesPerView: 2,
+            spaceBetween: 80,
+        },
+    }
 });
-swiper.loopDestroy();
-swiper.loopCreate();
 
 
 
 const logoHeader = document.getElementById('header-logo__image');
 logoHeader.src = logo;
 const firstPageImg = document.getElementById('first-page-img');
-firstPageImg.src = firstpage;
+const firstpageButton = document.getElementsByClassName('firstpage-button__button')[0];
+
+const decideWidth = () => {
+    if (document.body.clientWidth <= 425) {
+        firstpageButton.style.backgroundImage = `url(${circle})`
+        firstpageButton.style.backgroundPosition = 'center'
+        firstpageButton.style.backgroundRepeat = 'no-repeat'
+        firstPageImg.src = firstpage2;
+    } else {
+        firstPageImg.src = firstpage;
+    }
+}
+decideWidth()
+
+
+window.onresize = function () {
+    decideWidth()
+};
 
 const firstPageFooters = document.getElementsByClassName('firstpage-footer');
 for (let footer of firstPageFooters) {
@@ -69,3 +103,5 @@ const contactsBTNImage = document.getElementById('btn-icon');
 contactsBTNImage.src = whatsapp
 const footerLogo = document.getElementById('footer-container-logo-img');
 footerLogo.src = footericon
+
+

@@ -1,6 +1,6 @@
 .secondpage-container {
-    margin-top: 160px;
-    margin-bottom: 160px;
+    padding-top: 160px;
+    padding-bottom: 160px;
 }
 
 .description-secondpage {
@@ -67,22 +67,112 @@
     background: linear-gradient(180deg, #FFF6DA 0%, rgba(196, 196, 196, 0) 100%);
 }
 
-@media screen and (min-width:1024px) and (max-width:1243px) {
+/* Large desktops and laptops */
+@media (min-width: 1200px) {}
+
+/* Landscape tablets and medium desktops */
+@media (min-width: 992px) and (max-width: 1199px) {
+    .secondpage-benefits-item {
+        width: 300px;
+    }
+
+    .secondpage-benefits {
+        padding-left: 0;
+        padding: 0 20px;
+    }
+}
+
+/* Portrait tablets and small desktops */
+@media (min-width: 768px) and (max-width: 991px) {
+
+    .secondpage-benefits {
+        padding-left: 0;
+        padding: 0 20px;
+
+        &-list {
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+
+        }
+
+        &-item {
+            max-width: 500px;
+
+            &__text {
+                font-size: 15px;
+            }
+
+            &__title {
+                font-size: 18px;
+            }
+        }
+    }
 
     .description-secondpage {
         padding-left: 0;
     }
+}
 
-    .container {
+/* Landscape phones and portrait tablets */
+@media (max-width: 768px) {
+
+    .secondpage-benefits {
         padding-left: 0;
+        padding: 0 20px;
+
+        &-list {
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+
+        }
+
+        &-item {
+            max-width: 450px;
+
+            &__text {
+                font-size: 15px;
+            }
+
+            &__title {
+                font-size: 18px;
+            }
+        }
+    }
+
+    .description-secondpage {
+        padding-left: 0;
+    }
+}
+
+/* Portrait phones and smaller */
+@media (max-width: 480px) {
+    .secondpage {
+        background: none;
+    }
+
+    .description-secondpage {
+        padding-top: 60px;
+        background: linear-gradient(180deg, #FFF6DA 0%, #FFFFFF 0%, #FFF6DA 0.01%, #FFFFFF 100%);
     }
 
     .secondpage-benefits {
-        padding-left: 20px;
-        padding-right: 20px;
+        margin-top: 0;
+        padding-top: 50px;
+        background-color: #FFFFFF;
+    }
 
-        &-item {
-            max-width: 300px;
+    .secondpage-container {
+        padding-top: 0;
+    }
+
+    .secondpage {
+        .container {
+            padding-top: 0;
         }
     }
 }
+
+/* Iphone 5 */
+@media (max-width: 320px) {}
