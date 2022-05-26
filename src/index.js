@@ -14,6 +14,8 @@ import support from './assets/support 1.png'
 import footericon from './assets/footericon.png'
 import whatsapp from './assets/whatsapp.png'
 import circle from './assets/circles.png'
+import close from './assets/close.png'
+import menuIcon from './assets/menuicon.png'
 import Swiper from 'swiper';
 import '../node_modules/swiper/swiper.scss';
 import '../node_modules/swiper/modules/pagination/pagination.scss';
@@ -82,6 +84,7 @@ for (let img of imgs) {
     img.src = commentgirl
 }
 setImageBySelector('#header-logo__image', logo)
+setImageBySelector('#menu-icon', menuIcon)
 setImageBySelector('#second-page-img', secondimg)
 setImageBySelector('#benefitsPerformance', performance)
 setImageBySelector('#benefitsFeather', feather)
@@ -93,4 +96,17 @@ setImageBySelector('#btn-icon', whatsapp)
 setImageBySelector('#footer-container-logo-img', footericon)
 
 
+const menu = document.querySelector('.nav-menu-btn');
+const links = document.querySelector('.nav__links');
+const back = document.querySelector('.menu-background');
+const closeBtn = document.querySelector('#close-btn');
+menu.addEventListener('click', () => {
+    links.classList.toggle('active');
+    back.classList.toggle('active')
+})
+closeBtn.src = close;
 
+closeBtn.addEventListener('click', () => {
+    links.classList.toggle('active');
+    back.classList.toggle('active')
+})

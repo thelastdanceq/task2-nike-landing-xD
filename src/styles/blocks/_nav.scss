@@ -1,9 +1,23 @@
 .nav-row {
+    position: relative;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     text-align: center;
 
+}
+
+.nav-menu-btn {
+    height: 30px;
+    position: absolute;
+    right: 2rem;
+    display: none;
+
+    img {
+        max-width: 100%;
+        height: 100%;
+        display: block;
+    }
 }
 
 .nav {
@@ -40,6 +54,35 @@
 @media (max-width: 768px) {
     .nav-row {
         padding-left: 30px;
+    }
+}
+
+@media (max-width:660px) {
+    .nav__links {
+        &.active {
+            position: fixed;
+            display: flex;
+            justify-content: center;
+            text-align: center;
+            z-index: 6;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+
+            //font
+            flex-direction: column;
+            font-family: 'DM Sans';
+            font-style: normal;
+            font-weight: 700;
+            font-size: 40px;
+            line-height: 36px;
+        }
+
+        display: none;
+    }
+
+    .nav-menu-btn {
+        display: block;
     }
 }
 
